@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-custom-gradient {
+    background: linear-gradient(100deg, rgb(18, 106, 182), rgb(105, 28, 200), rgb(104, 21, 171), rgb(160, 18, 170), rgb(105, 1, 57));
+}
+
+@keyframes gradient-move-diagonal {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.animate-gradient-move-diagonal {
+    background-size: 200% 200%;
+    animation: gradient-move-diagonal 8s ease infinite;
+}
