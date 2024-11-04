@@ -11,7 +11,7 @@ export default {
         sans: ['Lato', 'sans-serif'],
       },
       colors: {
-        customGray: 'rgb(17, 24, 39)',
+        customPurple: 'rgb(40, 25, 42)',
       },
     },
   },

@@ -24,3 +24,67 @@
     background-size: 200% 200%;
     animation: gradient-move-diagonal 8s ease infinite;
 }
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.border-container {
+    height: 70vh;
+    width: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-content {
+    height: 390px;
+    width: 360px;
+    box-shadow: 16px 14px 20px rgb(26, 24, 26);
+    border-radius: 10%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-content .photo {
+    height: 380px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 10%;
+    z-index: 2;
+    /* Asegura que la imagen esté por encima del borde */
+}
+
+.image-content::before {
+    content: "";
+    position: absolute;
+    height: 700px;
+    width: 700px;
+    background: conic-gradient(rgb(40, 25, 42) 0deg,
+            rgba(206, 34, 172, 0) 60deg,
+            rgba(197, 34, 206, 0.8) 120deg,
+            rgba(154, 34, 206, 0.8) 180deg,
+            rgba(103, 34, 206, 0.8) 240deg,
+            rgba(34, 109, 206, 0.8) 300deg,
+            rgba(40, 25, 42, 0) 360deg);
+    animation: rotar 3s linear infinite;
+    z-index: 1;
+}
+
+.image-content::after {
+    content: "";
+    position: absolute;
+    height: 380px;
+    width: 350px;
+    background-color: rgb(40, 25, 42);
+    border-radius: 10%;
+}
