@@ -13,7 +13,7 @@
 
     50% {
         background-position: 100% 100%;
-    }
+    }   
 
     100% {
         background-position: 0% 0%;
@@ -44,8 +44,8 @@
 }
 
 .image-content {
-    height: 390px;
-    width: 360px;
+    height: 330px;
+    width: 300px;
     box-shadow: 16px 14px 20px rgb(26, 24, 26);
     border-radius: 10%;
     position: relative;
@@ -56,12 +56,23 @@
 }
 
 .image-content .photo {
-    height: 380px;
-    width: 350px;
+    height: 320px;
+    width: 290px;
     object-fit: cover;
     border-radius: 10%;
     z-index: 2;
     /* Asegura que la imagen esté por encima del borde */
+}
+
+@media (min-width: 640px) { /* Pantallas pequeñas */
+    .image-content {
+        width: 330px; /* Imagen + 10px por cada lado */
+        height: 360px;
+    }
+    .image-content .photo {
+        width: 320px;
+        height: 350px;
+    }
 }
 
 .image-content::before {
